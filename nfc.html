@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Suara Dalam - NFC</title>
+  <script>
+    // Ambil ID dari URL (misal: ?id=eki)
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id") || "default";
+
+    // Hitung hari ke-berapa dalam tahun ini
+    const today = new Date();
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = today - start + ((start.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000);
+    const dayOfYear = Math.floor(diff / 86400000); // 86400000 = ms per hari
+
+    // Kombinasi id dan tanggal untuk variasi
+    const idValue = id.length;
+    const pageNumber = (idValue + dayOfYear) % 31 + 1; // loop dari 1–31
+
+    // Redirect otomatis ke halaman harian
+    const target = `https://suaradalam.github.io/hari${pageNumber}.html`;
+    window.location.href = target;
+  </script>
+</head>
+<body>
+  <p>Mengalihkan ke konten harian Suara Dalam...</p>
+</body>
+</html>
