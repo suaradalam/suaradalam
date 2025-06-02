@@ -4,46 +4,62 @@
   <meta charset="UTF-8">
   <title>Suara Dalam — Hari Ini</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
-      background-color: #111;
-      color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
     }
     img {
       width: 100%;
-      max-height: 300px;
+      height: 260px;
       object-fit: cover;
-      border-bottom: 5px solid #555;
+    }
+    .container {
+      padding: 30px 20px;
+      max-width: 720px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
     }
     .quote {
-      font-size: 1.4em;
-      margin: 20px 0;
+      font-size: 1.2em;
+      margin-bottom: 20px;
     }
     button {
       background-color: #fff;
-      color: #111;
+      color: #000;
       border: none;
       padding: 10px 20px;
       font-size: 1em;
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #ddd;
     }
   </style>
 </head>
 <body>
-  <img src="https://source.unsplash.com/1600x900/?nature,quiet,spiritual" alt="Background spiritual">
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" alt="Background spiritual">
   <div class="container">
     <h1>Suara Dalam — Hari Ini</h1>
-    <p class="quote">Langkah kecil hari ini bisa jadi awal perubahan besar esok.</p>
+    <p class="quote">Jangan lelah untuk berharap, karena Tuhan tak pernah lelah memberi harapan.</p>
     <button onclick="document.getElementById('musik').play()">Klik untuk mendengarkan</button>
     <audio id="musik" loop>
-      <source src="https://docs.google.com/uc?export=download&id=1-gq_NKnPJB-I0A5zkaLFGjOVdOflWVXJ" type="audio/mpeg">
+      <source src="https://docs.google.com/uc?export=download&id=1V3HbxOO0XchfqAptZIHBSqjtmQWTCqEN" type="audio/mpeg">
     </audio>
   </div>
 </body>
