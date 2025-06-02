@@ -2,65 +2,47 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Suara Dalam — Hari Ini</title>
+  <title>Suara Dalam Darimu — Hari Ini Shanty</title>
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #0e0e0e;
-      color: #ffffff;
+      height: 100vh;
+      width: 100%;
       font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://source.unsplash.com/1600x900/?spiritual,nature,calm,sky');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: start;
-      min-height: 100vh;
-    }
-    img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-    .container {
-      padding: 30px 20px;
-      max-width: 720px;
       text-align: center;
+      padding: 20px;
+      backdrop-filter: brightness(0.85);
     }
     h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-size: 2.2em;
+      text-shadow: 1px 1px 4px black;
     }
-    .quote {
+    p {
       font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    button {
-      background-color: #fff;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #ddd;
+      margin-top: 1em;
+      max-width: 800px;
+      text-shadow: 1px 1px 3px black;
     }
   </style>
 </head>
 <body>
-  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" alt="Background spiritual">
-  <div class="container">
-    <h1>Suara Dalam — Hari Ini</h1>
-    <p class="quote">Jangan lelah untuk berharap, karena Tuhan tak pernah lelah memberi harapan.</p>
-    <button onclick="document.getElementById('musik').play()">Klik untuk mendengarkan</button>
-    <audio id="musik" loop>
-      <source src="https://docs.google.com/uc?export=download&id=18fWavOXM80q0tWPZ-JQSEeI-C9QAYy9C" type="audio/mpeg">
-    </audio>
-  </div>
+  <h1>Suara Dalam Darimu — Hari Ini Shanty</h1>
+  <p>Jangan lelah untuk berharap, karena Tuhan tak pernah lelah memberi harapan.</p>
+  <audio autoplay loop>
+    <source src="https://docs.google.com/uc?export=download&id=17QXpNbTJN_WFxm83A_sR5BEGEDTGEnPA" type="audio/mpeg">
+  </audio>
 </body>
 </html>
