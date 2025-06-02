@@ -1,22 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Suara Dalam - NFC</title>
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id") || "default";
-
-    const today = new Date();
-    const start = new Date(today.getFullYear(), 0, 0);
-    const diff = today - start + ((start.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000);
-    const dayOfYear = Math.floor(diff / 86400000);
-    const idValue = id.length;
-    const pageNumber = (idValue + dayOfYear) % 31 + 1;
-
-    // Redirect ke path yang benar dengan cache-busting versi
-<script>
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id") || "default";
 
@@ -38,5 +25,9 @@
     // Redirect
     const target = `https://suaradalam.github.io/suaradalam/${fileName}?v=${new Date().getTime()}`;
     window.location.href = target;
-</script>
-
+  </script>
+</head>
+<body>
+  <p>Mengalihkan ke konten harian Suara Dalam...</p>
+</body>
+</html>
