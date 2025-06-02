@@ -16,11 +16,27 @@
     const pageNumber = (idValue + dayOfYear) % 31 + 1;
 
     // Redirect ke path yang benar dengan cache-busting versi
-    const target = `https://suaradalam.github.io/suaradalam/hari${pageNumber}.html?v=${new Date().getTime()}`;
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id") || "default";
+
+    const today = new Date();
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = today - start + ((start.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000);
+    const dayOfYear = Math.floor(diff / 86400000);
+
+    // Waktu sekarang
+    const hour = today.getHours();
+    let waktu = "pagi";
+    if (hour >= 12 && hour < 17) waktu = "siang";
+    else if (hour >= 17 || hour < 4) waktu = "malam";
+
+    // Tentukan nama file berdasarkan hari dan waktu
+    const hariKe = String(dayOfYear + 1).padStart(3, '0');
+    const fileName = `hari${hariKe}_${waktu}.html`;
+
+    // Redirect
+    const target = `https://suaradalam.github.io/suaradalam/${fileName}?v=${new Date().getTime()}`;
     window.location.href = target;
-  </script>
-</head>
-<body>
-  <p>Mengalihkan ke konten harian Suara Dalam...</p>
-</body>
-</html>
+</script>
+
