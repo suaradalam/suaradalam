@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Suara Dalam — Hari Ini</title>
+  <meta charset="UTF-8">
+  <title>Suara Dalam — Hari Ini</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-bottom: 5px solid #555;
+    }
+    .quote {
+      font-size: 1.4em;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #fff;
+      color: #111;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  </style>
 </head>
-<body style="margin:0; font-family:sans-serif; background:#111; color:#fff; text-align:center; padding:20px;">
+<body>
+  <img src="https://source.unsplash.com/1600x900/?nature,quiet,spiritual" alt="Background spiritual">
+  <div class="container">
     <h1>Suara Dalam — Hari Ini</h1>
-    <p>Satu doa di pagi hari bisa mengubah seharianmu.</p>
-    <audio autoplay loop>
-        <source src="https://docs.google.com/uc?export=download&id=1mL6RAOvhxQ1LbTr7XSwnytIw8gj76Bya" type="audio/mpeg">
+    <p class="quote">Langkah kecil hari ini bisa jadi awal perubahan besar esok.</p>
+    <button onclick="document.getElementById('musik').play()">Klik untuk mendengarkan</button>
+    <audio id="musik" loop>
+      <source src="https://docs.google.com/uc?export=download&id=1doGpltxncDOkqAviz9hecCyG_Uqplnit" type="audio/mpeg">
     </audio>
+  </div>
 </body>
 </html>
